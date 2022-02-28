@@ -59,3 +59,7 @@ Route::get('/events-feed', function () {
 
     return $events;
 });
+
+Route::fallback(function () {
+    return view('404');
+});
