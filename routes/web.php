@@ -28,3 +28,34 @@ Route::get('/calendar', function () {
 Route::get('/board', function () {
     return view('board');
 });
+
+Route::get('/events-feed', function () {
+    class Event
+    {
+        public $title;
+        public $start;
+        public $end;
+
+        public function __construct($title, $start, $end)
+        {
+            $this->title = $title;
+            $this->start = $start;
+            $this->end = $end;
+        }
+    }
+
+    $events = array(
+        new Event(
+            "CSE4500 Class",
+            "2022-02-23T17:30:00",
+            "2022-02-23T18:45:00"
+        ),
+        new Event(
+            "CSE4500 Class",
+            "2022-02-28T17:30:00",
+            "2022-02-28T18:45:00",
+        )
+    );
+
+    return $events;
+});
