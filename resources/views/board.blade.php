@@ -7,7 +7,28 @@
 @stop
 
 @section('content')
-    <p>Content here</p>
+    <div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Backlog</h5>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">To Do</h5>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">In Progress</h5>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Done</h5>
+            </div>
+        </div>
+    </div>
 @stop
 
 @section('css')
