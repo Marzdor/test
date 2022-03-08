@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
@@ -28,6 +29,9 @@ Route::get('/calendar', function () {
 Route::get('/board', function () {
     return view('board');
 });
+
+Route::resource('/events', EventController::class);
+
 
 Route::get('/events-feed', function () {
     class Event
