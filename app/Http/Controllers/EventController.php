@@ -44,8 +44,8 @@ class EventController extends Controller
 
         $event = Event::create([
             'title' => $request->title,
-            'start_time' => date($request->start_time),
-            'end_time' => date($request->end_time),
+            'start_time' => date('Y-m-d H:i:s', $request->start_time),
+            'end_time' => date('Y-m-d H:i:s', $request->end_time),
         ]);
 
         return $this->index();
