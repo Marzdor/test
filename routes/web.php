@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
@@ -18,9 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/todos', function () {
-    return view('todos');
-});
+Route::resource('/todos', TodoController::class);
 
 Route::get('/calendar', function () {
     return view('calendar');
