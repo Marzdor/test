@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,4 +63,12 @@ Route::get('/events-feed', function () {
 
 Route::fallback(function () {
     return view('404');
+});
+
+Route::get('/db-test', function () {
+    try {
+        echo DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+        echo 'None';
+    }
 });
