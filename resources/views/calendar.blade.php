@@ -36,7 +36,7 @@
 
                     if (eventId) {
 
-                        const url = '{{ route('events.show', ':id') }}';
+                        let url = '{{ route('events.show', ':id') }}';
                         url = url.replace(':id', eventId);
                         window.location.href = url;
 
