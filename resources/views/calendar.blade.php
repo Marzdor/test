@@ -32,8 +32,13 @@
                 initialView: 'dayGridMonth',
                 events: '/events',
                 eventClick: (eventClickInfo) => {
-                    console.log('eventClickInfo info ', eventClickInfo);
-                    console.log('eventClickInfo info ', eventClickInfo.event.id);
+                    const eventId = eventClickInfo?.event?.id;
+
+                    if (eventId) {
+                        let url = "{{ route('events.show', ['event' => $event->ID]) }}";
+                        url = url.replace('ID', eventId);
+                        document.location.href = url;
+                    }
                 },
             });
             calendar.render();
