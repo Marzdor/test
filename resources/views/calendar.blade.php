@@ -33,9 +33,6 @@
                 events: '/events',
                 eventClick: (eventInfo) => {
                     console.log('event info ', eventInfo)
-                    // let url = "{{ route('events.show', ['event' => $event->eID]) }}";
-                    // url = url.replace('eID', eventInfo.id);
-                    // document.location.href = url;
                 },
             });
             calendar.render();
