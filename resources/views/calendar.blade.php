@@ -35,9 +35,11 @@
                     const eventId = eventClickInfo?.event?.id;
 
                     if (eventId) {
-                        let url = "{{ route('events.show', ['event' => $event->ID]) }}";
-                        url = url.replace('ID', eventId);
-                        document.location.href = url;
+
+                        const url = '{{ route('events.show', ':id') }}';
+                        url = url.replace(':id', eventId);
+                        window.location.href = url;
+
                     }
                 },
             });
