@@ -9,7 +9,7 @@
 @section('content')
     <h2>{{ $event->title }}</h2>
     <div>
-        <p>{{ date('M jS, Y - g:ia e', $event->start_time) }}</p>
-        <p>{{ date('M jS, Y - g:ia e', $event->end_time) }}</p>
+        <p>Start Time: {{ date('M jS, Y - g:ia e', $event->start_time) }}</p>
+        <p>End Time: {{ date('M jS, Y - g:ia e', $event->end_time) }}</p>
     </div>
 @stop
