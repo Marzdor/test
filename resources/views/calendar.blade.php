@@ -27,7 +27,6 @@
 @section('js')
     <script src="//cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
     <script>
-        console.log('events', $events)
         $(document).ready(function() {
             var calendar = new FullCalendar.Calendar($('#calendar')[0], {
                 initialView: 'dayGridMonth',
