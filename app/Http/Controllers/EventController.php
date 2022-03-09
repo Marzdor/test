@@ -14,7 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::select('title', 'start_time AS start', 'end_time AS end')->get();
+        $events = Event::select('id', 'title', 'start_time AS start', 'end_time AS end')->get();
         return $events;
     }
 
