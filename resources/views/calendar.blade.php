@@ -31,10 +31,11 @@
             var calendar = new FullCalendar.Calendar($('#calendar')[0], {
                 initialView: 'dayGridMonth',
                 events: '/events',
-                eventClick: () => {
-                    document.location.href = {
-                        route('events.show', ['event' => $event - > id])
-                    }
+                eventClick: (eventInfo) => {
+                    console.log('event info ', eventInfo)
+                    let url = "{{ route('events.show', ['event' => $event->eID]) }}";
+                    url = url.replace('eID', eventInfo.id);
+                    document.location.href = url;
                 },
             });
             calendar.render();
