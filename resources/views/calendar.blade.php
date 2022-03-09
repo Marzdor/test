@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-
+    <a href="{{ route('events.create') }} " class="btn btn-primary">Create</a>
     <div class="row">
         <div class="col-md-12">
             <div class="card card-primary">
@@ -27,6 +27,7 @@
 @section('js')
     <script src="//cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
     <script>
+        console.log('events', $events)
         $(document).ready(function() {
             var calendar = new FullCalendar.Calendar($('#calendar')[0], {
                 initialView: 'dayGridMonth',
