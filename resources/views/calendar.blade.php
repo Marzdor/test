@@ -31,8 +31,9 @@
             var calendar = new FullCalendar.Calendar($('#calendar')[0], {
                 initialView: 'dayGridMonth',
                 events: '/events',
-                eventClick: (eventInfo) => {
-                    console.log('event info ', eventInfo)
+                eventClick: (event) => {
+                    console.log('event info ', event);
+                    console.log('event info ', event.id);
                 },
             });
             calendar.render();
