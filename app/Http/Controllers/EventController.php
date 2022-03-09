@@ -15,7 +15,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::select('title', 'start_time AS start', 'end_time AS end')->get();
-        return view('events', compact('events'));
+        return view('calendar', compact('events'));
     }
 
     /**
